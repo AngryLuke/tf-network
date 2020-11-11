@@ -1,3 +1,8 @@
+output elb_security_group_ids {
+  description = "Security groups for ELB serving HTTP/HTTPS traffic"
+  value       = [aws_security_group.public.id]
+}
+
 output app_instance_security_group_ids {
   description = "Security groups for instances serving HTTP/HTTPS traffic"
   value       = [aws_security_group.private.id]
